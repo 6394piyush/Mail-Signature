@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signature Mail</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="StyleMail.css" />     
+    </head>
+    <body>
+        <h1 id="heading">MAIL SIGNATURE</h1>
+        <section id="page">
+            <section id="left">
+                <ul class="nav nav-pills">
+                    <li><a data-toggle="#pill_a" href="#home" onclick="ShowTabContentsHome()">HOME</a></li>
+                    <li><a data-toggle="#pill_b" href="#logo" onclick="ShowTabContentsLogo()">LOGO</a></li>
+                    <li><a data-toggle="#pill_c" href="#social" onclick="ShowTabContentsSocial()">SOCIAL</a></li>
+                    <li><a data-toggle="#pill_d" href="#style" onclick="ShowTabContentsStyle()">STYLE</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div id="home" class="active">
+                        <h1>Information</h1>
+                        <table id='input_values' class="table-input">
+                            <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td><input type="text" id="F_name" name="FirstName" onKeyPress="SignatureNameOnKeyPress(event)" onchange="SignatureNameOnChange(this)" oninput='SignatureNameOnChange(this,"F_name", "background", this.value)'> </td>  
+                                <td><input class='jscolor' onchange='ColorPicker("First Name",value)'/></td>
+                            </tr>
+                            <tr>
+                                <td>Title </td>
+                                <td>:</td>
+                                <td><input type="text" id="title" name="Title" onKeyPress="SignatureTitleOnKeyPress(event)" onchange="SignatureTitleOnChange(this)" oninput="SignatureTitleOnChange(this)"></td> 
+                                <td></td>
+                            </tr>
+                           <tr>
+                                <td>Email </td>
+                                <td>:</td>
+                                <td><input type="email" id="Email" name="Email" onKeyPress="SignatureEmailOnKeyPress(event)" onchange="SignatureEmailOnChange(this)" oninput="SignatureEmailOnChange(this)"></td> 
+                                <td><input class='jscolor' onchange='ColorPicker("Email",value)'/></td>
+                           </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td>:</td>
+                                <td><input type="text" id="Mobile" name="Mobile" onkeypress="SignatureMobileOnKeyPress(event)" onchange="SignatureMobileOnChange(this)" oninput="SignatureMobileOnChange(this)"></td>
+                                <td><input class='jscolor' onchange='ColorPicker("Mobile",value)'/></td>
+                            </tr> 
+                            <tr>
+                                <td>Company's Name </td>
+                                <td>:</td>
+                                <td><input type="text" id="C_name" name=C_name onKeyPress="SignatureCompanyOnKeyPress(event)" onchange="SignatureCompanyOnChange(this)" oninput="SignatureCompanyOnChange(this)"></td>
+                                <td><input class='jscolor' onchange='ColorPicker("Company Name",value)'/></td>
+                            </tr>
+                            
+                                <td>Office Phone </td>
+                                <td>:</td>
+                                <td><input type="text" id="O_phone" name="O_phone" onKeyPress="SignatureOfficePhoneOnKeyPress(event)" onchange="SignatureOfficePhoneOnChange(this)" oninput="SignatureOfficePhoneOnChange(this)"></td> 
+                                <td><input class='jscolor' onchange='ColorPicker("Office Phone",value)'/></td>   
+                        </tr>
+                            <tr>
+                                <td>Fax </td>
+                                <td>:</td>
+                                <td><input type="text" id="Fax" name="Fax" onKeyPress="SignatureFaxOnKeyPress(event)" onchange="SignatureFaxOnChange(this)" oninput="SignatureFaxOnChange(this)"></td> 
+                                <td><input class='jscolor' onchange='ColorPicker("Fax",value)'/></td>                         
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td><input type="text" id="Address" name="Address" onKeyPress="SignatureAddressOnKeyPress(event)" onchange="SignatureAddressOnChange(this)" oninput="SignatureAddressOnChange(this)"></td> 
+                                <td><input class='jscolor' onchange='ColorPicker("AddressLine",value)'/></td>
+                            </tr>
+                            <tr>
+                                <td>Address Line 1 </td>
+                                <td>:</td>
+                                <td><input type="text" id="Address1" name="Address1" onKeyPress="SignatureAddress1OnKeyPress(event)" onchange="SignatureAddress1OnChange(this)" oninput="SignatureAddress1OnChange(this)"></td>
+                                <td><input class='jscolor' onchange='ColorPicker("AddressLine1",value)'/></td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>:</td>
+                                <td><input type="url" id="Website" name="Website" onKeyPress="SignatureWebsiteOnKeyPress(event)" onchange="SignatureWebsiteOnChange(this)" oninput="SignatureWebsiteOnChange(this)"></td> 
+                                <td><input class='jscolor' onchange='ColorPicker("Website",value)'/></td>
+                            </tr>
+                            <tr>
+                        </table>
+
+                    </div> 
+                    <div id="logo" class="tab-content hide">
+                        <h1>Logo</h1>
+                        <h4>Maximum Size:100kb</h4>
+                        <input type="file" onchange="PreviewImageFile('Logo')"><br>
+                    </div> 
+                    <div id="social" class="tab-content hide">
+                        <h1>Social</h1>
+                        <form>
+                            <table class="table-input">
+                                <tr>
+                                    <td><b>COMPANY SOCIAL</b></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Facebook </td>
+                                    <td>:</td><td><input type="text" id="Facebook" name="Facebook" onchange="ShowValuesOnKeyPress(this.value,'Facebook')"></td>
+                                </tr>
+                                <tr>
+                                    <td>Twitter </td>
+                                    <td>:</td><td><input type="text" id="Twitter" name="Twitter" onchange="ShowValuesOnKeyPress(this.value,'Twitter')"></td>
+                                </tr>
+                                <tr>
+                                    <td>Linkedin </td>
+                                    <td>:</td><td><input type="text" id="Linkedin" name="Linkedin" onchange="ShowValuesOnKeyPress(this.value,'Linkedin')"></td>
+                                </tr>
+                                <tr>
+                                    <td>Google </td>
+                                    <td>:</td><td><input type="text" id="Google" name="Google" onchange="ShowValuesOnKeyPress(this.value,'Google')"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>USER SOCIAL</b></td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td>Facebook </td>
+                                    <td>:</td><td><input type="text" id="FacebookUser" name="FacebookUser" onchange="ShowValuesOnKeyPress(this.value,'FacebookUser')"></td>
+                                </tr>
+                                <tr>
+                                    <td>Twitter </td>
+                                    <td>:</td><td><input type="text" id="TwitterUser" name="TwitterUser" onchange="ShowValuesOnKeyPress(this.value,'TwitterUser')"></td>
+                                </tr>
+                                <tr>
+                                    <td>Linkedin </td>
+                                    <td>:</td><td><input type="text" id="LinkedinUser" name="LinkedinUser" onchange="ShowValuesOnKeyPress(this.value,'LinkedinUser')"></td>
+                                </tr>
+                            </table>
+                        </form>
+
+                    </div> 
+                    <div id="style" class="tab-content hide">
+                        <h1>Style</h1>
+                        <table class="table-input">  
+                               <tr>
+                                <td>Font Size</td>
+                                <td>:</td>
+                                <td><input type="text" id="Size" oninput="ChangeFontSize(this.value)" /></td> 
+
+                            </tr> 
+                          
+                            <div>    <select onchange="ChangeTheme(this.value)" >
+                                    <option value='0'>Select Theme </option>
+                                      <option value="Logo Aligned Top">Logo Aligned (default)</option>
+                             <option value="Logo Aligned Middle"> Logo Aligned Middle</option>
+                                 <option value="Logo Aligned Bottom">Logo Aligned Bottom</option>
+                            </select></div>
+                        </table>
+                    </div> 
+                </div>
+            </section>
+            <section id="right">
+                <div id="signature-preview" >    
+                    <table>
+                        <tr>
+                            <td>
+                                
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div id="tester"></div>
+                    <div id="InputTextPara"> 
+                       
+                   
+                       <a href="" id="LogoLink">
+                                    <div id="File1">
+                                        <img src="" id='Logo' height="75px" width="75px" class="output">
+                                    </div>
+                                </a>
+                        <div style="display: inline" id='Fname' class='output'></div>
+                        <div><img src='' id="Social5" height="20" width="20" class="output"></div>
+                        <div><img src='' id="Social6" height="20" width="20" class="output"></div>
+                        <div><img src='' id="Social7" height="20" width="20" class="output"></div>
+                       
+                   
+                  
+                        <div style="display: inline" id="Title1" class='output'></div>
+                        <div>   <a href="" id="EmailLink" >  <div id="Email1" class='output'></div></a>
+                            <div style="display: inline" id="Mobile1" class='output'></div></div></br>
+                            <div  style="display: table-row" id="C_name1" class='output'></div></br>
+                        <div>  <div style="display: inline" id="O_phone1" class='output'> </div>
+                            <div style="display: inline" id="Fax1" class='output'></div></div>
+                        <div style="display: table-row" id="AddressLine1" class='output'></div>
+                        <div style="display: table-row" id="AddressLine" class='output'></div>
+                        <div style="display: table-row">    <a href="" id="WebLink"><div id="Website1" class="output"></div></a></div>
+                         
+                    </div>
+                    <table>
+                        <tr> 
+                            <td><div id='Facebook1'><a href="" id='FacebookLink'> <img src='' id="Social1" height="20" width="20"></a></div></td>
+                            <td><div id='Twitter1'><a href="" id='TwitterLink'> <img src='' id="Social2" height="20" width="20"></a></div></td>
+                            <td><div id='Linkedin1'> <a href="" id='LinkedinLink'> <img src='' id="Social3" height="20" width="20"></a></div></td>
+                            <td><div id='Google1'><a href="" id='GoogleLink'> <img src='' id="Social4" height="20" width="20"></a></div></td>
+                        </tr>
+                    </table>
+                </div> 
+            </section>            
+        </section>
+        <div id="CodeFetch">
+        </div>
+
+        <div><button onclick="CodeToShow()">Show Code</button>
+        <img src='' id='Imagelogo'>
+        </div>
+        <script src="ScriptMail.js"></script>
+    </body>
+</html>

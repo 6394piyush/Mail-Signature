@@ -158,7 +158,7 @@ function ShowValuesOnKeyPress(values, name,output) {
                 {
                     var bypass1=document.getElementById("TwitterLink1");
               if(bypass1==null)
-                   CreateElements(values,'Logouser','TwitterLink1',Twitter,'CompanyLinks','TLink1'); 
+                   CreateElements(values,'Logoss','TwitterLink1',Twitter,'CompanyLinks','TLink1'); 
                  else
                       document.getElementById("TLink1").setAttribute("href",values);
                 break;
@@ -185,7 +185,7 @@ function ShowValuesOnKeyPress(values, name,output) {
         {
         var bypass1=document.getElementById("LinkedinLink1");
               if(bypass1==null)
-                  CreateElements(values,'Logouser','LinkedinLink1',Linkedin,'CompanyLinks','LLink1');
+                  CreateElements(values,'Logoss','LinkedinLink1',Linkedin,'CompanyLinks','LLink1');
              else 
                 document.getElementById("LLink1").setAttribute("href",values);
             break;
@@ -211,7 +211,7 @@ function ShowValuesOnKeyPress(values, name,output) {
                      {  var bypass1=document.getElementById("GoogleLink1");
               
                       if(bypass1==null)
-                      CreateElements(values,'Logouser','GoogleLink1',Google,'CompanyLinks','GLink1');
+                      CreateElements(values,'Logoss','GoogleLink1',Google,'CompanyLinks','GLink1');
                       else document.getElementById("GLink1").setAttribute("href",values);
                          break;
                                     }
@@ -237,7 +237,7 @@ function ShowValuesOnKeyPress(values, name,output) {
                   {  var bypass1=document.getElementById("FlickerLink1");
               
                                 if(bypass1==null)      
-                  CreateElements(values,'Logouser','FlickerLink1',Flicker,'CompanyLinks','Flink1');
+                  CreateElements(values,'Logoss','FlickerLink1',Flicker,'CompanyLinks','Flink1');
              
               else document.getElementById("FLink1").setAttribute("href",values);
                     
@@ -265,7 +265,7 @@ function ShowValuesOnKeyPress(values, name,output) {
        {
             var bypass1=document.getElementById("GithubLink1");
                if(bypass1==null)
-                  CreateElements(values,'Logouser','GithubLink1',Github,'CompanyLinks','GtLink1');
+                  CreateElements(values,'Logoss','GithubLink1',Github,'CompanyLinks','GtLink1');
               
               else
                   document.getElementById("GtLink1").setAttribute("href",values);
@@ -294,7 +294,7 @@ function ShowValuesOnKeyPress(values, name,output) {
         var bypass1=document.getElementById("ImdbLink1");
                if(bypass1==null)
                           
-                  CreateElements(values,'Logouser','ImdbLink1',Imdb,'CompanyLinks','ImLink1');
+                  CreateElements(values,'Logoss','ImdbLink1',Imdb,'CompanyLinks','ImLink1');
               
               else document.getElementById("ImLink1").setAttribute("href",values);
             break;
@@ -320,7 +320,7 @@ function ShowValuesOnKeyPress(values, name,output) {
            var bypass1=document.getElementById("InstagramLink1");
                  if(bypass1==null)                
                                   
-                  CreateElements(values,'Logouser','InstagramLink1',Instagram,'CompanyLinks','ILink1');
+                  CreateElements(values,'Logoss','InstagramLink1',Instagram,'CompanyLinks','ILink1');
              
               else document.getElementById("ILink1").setAttribute("href",values);
              break;
@@ -348,7 +348,7 @@ function ShowValuesOnKeyPress(values, name,output) {
                     var bypass1=document.getElementById("MapsLink1");
                if(bypass1==null)                     
                                      
-                  CreateElements(values,'Logouser','MapsLink1',Maps,'CompanyLinks','MLink1');
+                  CreateElements(values,'Logoss','MapsLink1',Maps,'CompanyLinks','MLink1');
             
               else document.getElementById("MLink1").setAttribute("href",values);
           
@@ -379,7 +379,7 @@ function ShowValuesOnKeyPress(values, name,output) {
                                                 
                                                 
                                   
-                  CreateElements(values,'Logouser','PintrestLink1',Pintrest,'CompanyLinks','PLink1');
+                  CreateElements(values,'Logoss','PintrestLink1',Pintrest,'CompanyLinks','PLink1');
               
               else document.getElementById("PLink1").setAttribute("href",values);
   
@@ -412,7 +412,7 @@ break;}
                  if(bypass1==null)                            
                                                     
                                                
-                  CreateElements(values,'Logouser','QuoraLink1',Quora,'CompanyLinks','QLink1');
+                  CreateElements(values,'Logoss','QuoraLink1',Quora,'CompanyLinks','QLink1');
               
               else document.getElementById("QLink1").setAttribute("href",values);
             
@@ -446,7 +446,7 @@ break;}
                  if(bypass1==null)                                 
                                                         
                                                    
-                  CreateElements(values,'Logouser','SkypeLink1',Skype,'CompanyLinks','SLink1');
+                  CreateElements(values,'Logoss','SkypeLink1',Skype,'CompanyLinks','SLink1');
               
               else  document.getElementById("SLink1").setAttribute("href",values);
            
@@ -471,7 +471,7 @@ break;}
                                  var bypass1=document.getElementById("SoundcloudLink1");
                if(bypass1==null)                                    
                                                             
-               CreateElements(values,'Logouser','SoundcloudLink1',Soundcloud,'CompanyLinks','ScLink1');
+               CreateElements(values,'Logoss','SoundcloudLink1',Soundcloud,'CompanyLinks','ScLink1');
                
               else document.getElementById("ScLink1").setAttribute("href",values);
            
@@ -497,7 +497,7 @@ break;}
                         var bypass1=document.getElementById("TumblrLink1");
                 if(bypass1==null)                                       
                                                           
-                  CreateElements(values,'Logouser','TumblrLink1',Tumblr,'CompanyLinks','TbLink1');
+                  CreateElements(values,'Logoss','TumblrLink1',Tumblr,'CompanyLinks','TbLink1');
               
               else document.getElementById("TbLink1").setAttribute("href",values);
            
@@ -521,7 +521,7 @@ break;}
             case "logoss":{
               var bypass1=document.getElementById("VineLink1");
                   if(bypass1==null)                                  
-                  CreateElements(values,'Logouser','VineLink1',Vine,'CompanyLinks','VLink1');
+                  CreateElements(values,'Logoss','VineLink1',Vine,'CompanyLinks','VLink1');
                
               else document.getElementById("VLink1").setAttribute("href",values);
                 
@@ -549,7 +549,7 @@ break;}
                    if(bypass1==null)                                             
                                                                         
                                                                   
-                  CreateElements(values,'Logouser','WordpressLink1',Wordpress,'CompanyLinks','WLink1');
+                  CreateElements(values,'Logoss','WordpressLink1',Wordpress,'CompanyLinks','WLink1');
               
               else document.getElementById("WLink1").setAttribute("href",values);
                      
@@ -574,7 +574,7 @@ break;}
                        var bypass1=document.getElementById("YoutubeLink1");
                  if(bypass1==null)                                                   
                                                                         
-                  CreateElements(values,'Logouser','YoutubeLink1',Youtube,'CompanyLinks','YLink1');
+                  CreateElements(values,'Logoss','YoutubeLink1',Youtube,'CompanyLinks','YLink1');
               
               else document.getElementById("YLink1").setAttribute("href",values);
            

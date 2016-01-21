@@ -772,7 +772,54 @@ function SizeChange(whose,value){
  }
  }
  }*/
- function ChangeIcon(type){
+ function ChangeIconUser(type){
+     switch(type){
+         case 'Square':{
+                  var logo=document.getElementsByClassName("Logouser");
+         for(i=0;i<=logo.length;i++)
+         {
+           logo[i].style.borderRadius="0px";
+         }
+     break;
+             }
+ 
+         case 'Rounded':{
+                  var logo=document.getElementsByClassName("Logouser");
+         for(i=0;i<=logo.length;i++)
+         {
+           logo[i].style.borderRadius="4px";
+         }
+     break;
+             }
+ 
+         case 'circle':{
+                  var logo=document.getElementsByClassName("Logouser");
+         for(i=0;i<=logo.length;i++)
+         {
+           logo[i].style.borderRadius="50%";
+         }
+     break;
+             }
+ 
+         case 'Two Side Rounded':{
+                  var logo=document.getElementsByClassName("Logouser");
+         for(i=0;i<=logo.length;i++)
+         {
+           logo[i].style.borderRadius="5px 15px";
+         }
+     break;
+             }
+         case 'Right Rounded':{
+                  var logo=document.getElementsByClassName("Logouser");
+         for(i=0;i<=logo.length;i++)
+         {
+           logo[i].style.borderRadius="2px 15px 10px 2px";
+         }
+     break;
+             }
+ }
+ }
+ function ChangeIconCompany(type){
      switch(type){
          case 'Square':{
                   var logo=document.getElementsByClassName("Logoss");

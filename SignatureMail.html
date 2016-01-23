@@ -8,256 +8,234 @@
     </head>
     <body>
         <h1 id="heading">MAIL SIGNATURE</h1>
-        
+  
+        <!--
         <div id='preview' style='height: 500px; width: 700px; background: beige; padding:10px' >
             <a href="#home" ><img src='img/rabbit1.jpg' id='slide' width='600' height="400"></a>
-           
-            
-            
-            
         </div>
-        
-        
-        
+        -->
         
         <section id="page">
             <section id="left">
                 <ul class="nav">
-                    <li><a onclick="showTab('home', this)">HOME</a></li>
-                    <li><a onclick="showTab('logo', this)">LOGO</a></li>
-                    <li><a onclick="showTab('social', this)">SOCIAL</a></li>
-                    <li><a onclick="showTab('style', this)">STYLE</a></li>
+                    <li><a onclick="showTab('inputinfo', this)">HOME</a></li>
+                    <li><a onclick="showTab('inputlogo', this)">LOGO</a></li>
+                    <li><a onclick="showTab('inputsocial', this)">SOCIAL</a></li>
+                    <li><a onclick="showTab('inputstyle', this)">STYLE</a></li>
                 </ul>
                 <div class="tab-container">
-                    <div id="home" class="tab show">
-                        <table id='input_values' class="table-input">
-                            <tr>
+                    <div id="inputinfo" class="tab show">
+                        <table id='inputvalues' class="table-input">
+                            <tr style="text-align: center">
+                                <th></th>
+                                <th></th>
+                                <th style="width:50%">Information</th>  
+                                <th style="width:10%">Size</th>
+                                <th>Color</th>
+                            </tr>
+                        <!--    <tr>
+                                <td>Universal</td>
+                                <td>:</td>
+                                <td><input type="text" id="inputuniversal" oninput='universallyUpdateSignatureText(this)'> </td>  
+                                <td><input type="number" min="8" max="40" oninput='universallyUpdateSignatureTextSize(this.value)'/></td>
+                                <td><input class='jscolor' onchange='UniversalColorPicker("name", this.value)'/></td>
+                            </tr>
+                            <tr> -->
                                 <td>Name</td>
                                 <td>:</td>
-                                <td><input type="text" id="F_name" name="FirstName" oninput='ShowValuesOnKeyPress(this.value,"First Name")'> </td>  
-                                <td><input class='jscolor' onchange='ColorPicker("First Name", this.value)'/></td>
+                                <td><input type="text" id="inputname" oninput='updateSignatureText(this)'> </td>  
+                                <td><input type="number" id="inputnamesize" min="8" max="40" oninput='updateSignatureTextSize("name", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("name", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Title </td>
                                 <td>:</td>
-                                <td><input type="text" id="title" name="Title" oninput="ShowValuesOnKeyPress(this.value,'Title')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("Title", this.value)'/></td>
+                                <td><input type="text" id="inputtitle" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputtitlesize" min="8" max="40" oninput='updateSignatureTextSize("title", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("title", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Email </td>
                                 <td>:</td>
-                                <td><input type="email" id="Email" name="Email" oninput="ShowValuesOnKeyPress(this.value,'Email')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("Email", this.value)'/></td>
+                                <td><input type="email" id="inputemail" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputemailsize"  min="8" max="40" oninput='updateSignatureTextSize("email", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("email", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Mobile</td>
                                 <td>:</td>
-                                <td><input type="text" id="Mobile" name="Mobile" oninput="ShowValuesOnKeyPress(this.value,'Mobile')"></td>
-                                <td><input class='jscolor' onchange='ColorPicker("Mobile", this.value)'/></td>
+                                <td><input type="text" id="inputmobile" oninput="updateSignatureText(this)"></td>
+                                <td><input type="number" id="inputmobilesize" min="8" max="40" oninput='updateSignatureTextSize("mobile", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("mobile", this.value)'/></td>
                             </tr> 
                             <tr>
                                 <td>Company's Name </td>
                                 <td>:</td>
-                                <td><input type="text" id="C_name" name=C_name  oninput="ShowValuesOnKeyPress(this.value,'Company Name')"></td>
-                                <td><input class='jscolor' onchange='ColorPicker("Company Name", this.value)'/></td>
+                                <td><input type="text" id="inputcompanyname" oninput="updateSignatureText(this)"></td>
+                                <td><input type="number" id="inputcompanynamesize" min="8" max="40" oninput='updateSignatureTextSize("companyname", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("companyname", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Office Phone </td>
                                 <td>:</td>
-                                <td><input type="text" id="O_phone" name="O_phone"  oninput="ShowValuesOnKeyPress(this.value,'Office Phone')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("Office Phone", this.value)'/></td>   
+                                <td><input type="text" id="inputofficephone" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputofficephonesize" min="8" max="40" oninput='updateSignatureTextSize("officephone", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("officephone", this.value)'/></td>   
                             </tr>
                             <tr>
                                 <td>Fax </td>
                                 <td>:</td>
-                                <td><input type="text" id="Fax" name="Fax" oninput="ShowValuesOnKeyPress(this.value,'Fax')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("Fax", this.value)'/></td>                         
+                                <td><input type="text" id="inputfax" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputfaxsize" min="8" max="40" oninput='updateSignatureTextSize("fax", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("fax", this.value)'/></td>                         
                             </tr>
                             <tr>
                                 <td>Address</td>
                                 <td>:</td>
-                                <td><input type="text" id="Address" name="Address" oninput="ShowValuesOnKeyPress(this.value,'Address')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("AddressLine", this.value)'/></td>
+                                <td><input type="text" id="inputaddresslineone" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputaddresslineonesize" min="8" max="40" oninput='updateSignatureTextSize("addresslineone", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("addresslineone", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Address Line 1 </td>
                                 <td>:</td>
-                                <td><input type="text" id="Address1" name="Address1" oninput="ShowValuesOnKeyPress(this.value,'Address1')"></td>
-                                <td><input class='jscolor' onchange='ColorPicker("AddressLine1", this.value)'/></td>
+                                <td><input type="text" id="inputaddresslinetwo" oninput="updateSignatureText(this)"></td>
+                                <td><input type="number" id="inputaddresslinetwosize"  min="8" max="40" oninput='updateSignatureTextSize("addresslinetwo", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("addresslinetwo", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Website</td>
                                 <td>:</td>
-                                <td><input type="url" id="Website" name="Website" oninput="ShowValuesOnKeyPress(this.value,'Website')"></td> 
-                                <td><input class='jscolor' onchange='ColorPicker("Website", this.value)'/></td>
+                                <td><input type="url" id="inputwebsite" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="number" id="inputwebsitesize"  min="8" max="40" oninput='updateSignatureTextSize("website", this.value)'/></td>
+                                <td><input class='jscolor' onchange='ColorPicker("website", this.value)'/></td>
                             </tr>
                         </table>
-
                     </div> 
-                    <div id="logo" class="tab hide">
+                    <div id="inputlogo" class="tab hide">
                         <h4>Maximum Size:100kb</h4>
-                        <input type="file" onchange="PreviewImageFile('LogoInput', 'Logo')" id="LogoInput"><br>
+                        <input type="file" onchange="PreviewImageFile('inputlogoimage', 'logoimage')" id="inputlogoimage"><br>
                     </div> 
-                    <div id="social" class="tab hide">
-                        <form>
-                            <table class="table-input">
-                                <tr>
-                                    <td colspan="3"><b>COMPANY SOCIAL</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Facebook </td>
-                                    <td>:</td><td><input type="text" id="Facebook" name="Facebook" onchange="ShowValuesOnKeyPress(this.value, 'Facebook','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Twitter </td>
-                                    <td>:</td><td><input type="text" id="Twitter" name="Twitter" onchange="ShowValuesOnKeyPress(this.value, 'Twitter','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Linkedin </td>
-                                    <td>:</td><td><input type="text" id="Linkedin" name="Linkedin" onchange="ShowValuesOnKeyPress(this.value, 'Linkedin','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Google </td>
-                                    <td>:</td><td><input type="text" id="Google" name="Google" onchange="ShowValuesOnKeyPress(this.value, 'Google','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Flicker </td>
-                                    <td>:</td><td><input type="text" id="Flicker" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Flicker','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Github </td>
-                                    <td>:</td><td><input type="text" id="Github" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Github','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Imdb </td>
-                                    <td>:</td><td><input type="text" id="Imdb" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Imdb','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Instagram </td>
-                                    <td>:</td><td><input type="text" id="Instagram" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Instagram','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Maps </td>
-                                    <td>:</td><td><input type="text" id="Maps" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Maps','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Pintrest </td>
-                                    <td>:</td><td><input type="text" id="Pintrest" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Pintrest','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Quora </td>
-                                    <td>:</td><td><input type="text" id="Quora" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Quora','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Skype </td>
-                                    <td>:</td><td><input type="text" id="Skype" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Skype','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Soundcloud </td>
-                                    <td>:</td><td><input type="text" id="Soundcloud" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Soundcloud','logoss')"></td>
-                                </tr>
-                                
-                                    <td>Tumblr </td>
-                                    <td>:</td><td><input type="text" id="Tumblr" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Tumblr','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Vine </td>
-                                    <td>:</td><td><input type="text" id="Vine" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Vine','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Wordpress </td>
-                                    <td>:</td><td><input type="text" id="Wordpress" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Wordpress','logoss')"></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>Youtube </td>
-                                    <td>:</td><td><input type="text" id="Youtube" name="Logos" onchange="ShowValuesOnKeyPress(this.value, 'Youtube','logoss')"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><b>USER SOCIAL</b></td>
-                                </tr>
-                                 <tr>
-                                    <td>Facebook </td>
-                                    <td>:</td><td><input type="text" id="FacebookUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Facebook','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Twitter </td>
-                                    <td>:</td><td><input type="text" id="TwitterUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Twitter','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Linkedin </td>
-                                    <td>:</td><td><input type="text" id="LinkedinUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Linkedin','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Google </td>
-                                    <td>:</td><td><input type="text" id="GoogleUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Google','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Flicker </td>
-                                    <td>:</td><td><input type="text" id="FlickerUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Flicker','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Github </td>
-                                    <td>:</td><td><input type="text" id="GithubUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Github','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Imdb </td>
-                                    <td>:</td><td><input type="text" id="ImdbUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Imdb','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Instagram </td>
-                                    <td>:</td><td><input type="text" id="InstagramUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Instagram','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Maps </td>
-                                    <td>:</td><td><input type="text" id="MapsUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Maps','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Pintrest </td>
-                                    <td>:</td><td><input type="text" id="PintrestUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Pintrest','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Quora </td>
-                                    <td>:</td><td><input type="text" id="QuoraUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Quora','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Skype </td>
-                                    <td>:</td><td><input type="text" id="SkypeUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Skype','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Soundcloud </td>
-                                    <td>:</td><td><input type="text" id="SoundcloudUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Soundcloud','logouser')"></td>
-                                </tr>
-                                
-                                    <td>Tumblr </td>
-                                    <td>:</td><td><input type="text" id="TumblrUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Tumblr','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Vine </td>
-                                    <td>:</td><td><input type="text" id="VineUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Vine','logouser')"></td>
-                                </tr>
-                                <tr>
-                                    <td>Wordpress </td>
-                                    <td>:</td><td><input type="text" id="WordpressUser" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Wordpress','logouser')"></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>Youtube </td>
-                                    <td>:</td><td><input type="text" id="Youtube" name="LogosUser" onchange="ShowValuesOnKeyPress(this.value, 'Youtube','logouser')"></td>
-                                </tr>                           
-                            </table>
-                        </form>
+                    <div id="inputsocial" class="tab hide">
+                        <table class="table-input">
+                            <tr style="text-align: center">
+                                <th colspan="2"><b></b></th><th>Company</th><th>User</th>
+                            </tr>
+                            <tr>
+                                <td>Facebook </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputfacebook" name="Facebook" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputfacebookuser" name="Facebook" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Twitter </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputtwitter" name="Twitter" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputtwitteruser" name="Twitter" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Linkedin </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputlinkedin" name="LinkedIn" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputlinkedinuser" name="LinkedIn" oninput="updateSignatureLogo(this, 'logouser')"></td>
 
+                            </tr>
+                            <tr>
+                                <td>Google </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputgoogle" name="Google" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputgoogleuser" name="Google" oninput="updateSignatureLogo(this, 'logouser')"></td>
+
+                            </tr>
+                            <tr>
+                                <td>Flicker </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputflicker" name="Flicker" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputflickeruser" name="Flicker" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Github </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputgithub" name="GitHub" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputgithubuser" name="GitHub" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>imdb </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputimdb" name="imdb" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputimdbuser" name="imdb" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Instagram </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputinstagram" name="Instagram" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputinstagramuser" name="Instagram" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Maps </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputmaps" name="Maps" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputmapsuser" name="Maps" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Pintrest </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputpintrest" name="Pintrest" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputpintrestuser" name="Pintrest" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Quora </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputquora" name="Quora" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputquorauser" name="Quora" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Skype </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputskype" name="Skype" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputskypeuser" name="Skype" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Soundcloud </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputsoundcloud" name="SoundCloud" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputsoundclouduser" name="SoundCloud" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Tumblr </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputtumblr" name="Tumblr" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputtumblruser" name="Tumblr" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Vine </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputvine" name="Vine" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputvineuser" name="Vine" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputwordpress" name="Wordpress" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputwordpressuser" name="Wordpress" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>
+                            <tr>
+                                <td>Youtube </td>
+                                <td>:</td>
+                                <td><input type="text" id="inputyoutube" name="Youtube" oninput="updateSignatureLogo(this, 'logocompany')"></td>
+                                <td><input type="text" id="inputyoutubeuser" name="Youtube" oninput="updateSignatureLogo(this, 'logouser')"></td>
+                            </tr>                         
+                        </table>
                     </div> 
-                    <div id="style" class="tab hide">
+                    <div id="inputstyle" class="tab hide">
                         <ul class="nav" id='nav'>
-                    <li><a onclick="showTab('TextStyle', this)">Text Style</a></li>
-                    <li><a onclick="showTab('SizeStyle', this)">Size Style</a></li>
-                    <li><a onclick="showTab('IconStyle', this)">Icon Style</a></li>
-                    <li><a onclick="showTab('Other', this)">STYLE</a></li>
-                </ul>
+                            <li><a onclick="showTab('TextStyle', this)">Text Style</a></li>
+                            <li><a onclick="showTab('SizeStyle', this)">Size Style</a></li>
+                            <li><a onclick="showTab('IconStyle', this)">Icon Style</a></li>
+                            <li><a onclick="showTab('Other', this)">STYLE</a></li>
+                        </ul>
                         <div id='TextStyle' class="tab hide">
-                            
+
                         </div>
                         <table class="table-input">  
                             <tr><td>Select Theme</td>
@@ -267,24 +245,8 @@
                                         <select onchange="ChangeTheme(this.value)" >
                                             <option value='0'>Select Theme </option>
                                             <option value="Logo Aligned Left">Logo Aligned Left</option>
-                                            <option value="Logo Aligned Middle"> Logo Aligned Middle</option>
+                                            <option value="Logo Aligned Right"> Logo Aligned Right</option>
                                             <option value="Logo Aligned Bottom">Logo Aligned Bottom</option>
-                                        </select>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr><td>Select Icon Style User</td>
-                                <td>:</td>
-                                <td>
-                                    <div>
-                                        <select onchange="ChangeIconCompany(this.value)" >
-                                            
-                                            <option value="Square">Square</option>
-                                            <option value="Rounded"> Rounded</option>
-                                            <option value="Right Rounded">Right Rounded</option>
-                                            <option value="Circle">Circle</option>
-                                            <option value="Two Side Rounded">Two Side Rounded</option>
-                                            
                                         </select>
                                     </div>
                                 </td>
@@ -293,14 +255,52 @@
                                 <td>:</td>
                                 <td>
                                     <div>
-                                        <select onchange="ChangeIconUser(this.value)" >
+                                        <select onchange="ChangeStyle(this.value,'Logoss')" >
                                             
-                                            <option value="Square">Square</option>
-                                            <option value="Rounded"> Rounded</option>
-                                            <option value="Right Rounded">Right Rounded</option>
-                                            <option value="Circle">Circle</option>
-                                            <option value="Two Side Rounded">Two Side Rounded</option>
+                                            <option value="0px">Square</option>
+                                            <option value="20%"> Rounded</option>
+                                            <option value="2% 35% 35% 2%">Right Rounded</option>
+                                            <option value="grayscale=100%">Grey</option>
+                                            <option value="50%">Circle</option>
+                                            <option value="5% 30%">Two Side Rounded</option>
                                             
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr><td>Select Icon Style User</td>
+                                <td>:</td>
+                                <td>
+                                    <div>
+                                        <select onchange="ChangeStyle(this.value,'Logouser')" >
+                                            
+                                            <option value="0px">Square</option>
+                                            <option value="20%"> Rounded</option>
+                                            <option value="2% 35% 35% 2%">Right Rounded</option>
+                                            <option value="100%">Grey</option>
+                                            <option value="50%">Circle</option>
+                                            <option value="5% 30%">Two Side Rounded</option>
+                                            
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr><td>Select Font</td>
+                                <td>:</td>
+                                <td>
+                                    <div>
+                                        <select onchange="ChangeFont(this.value)" >
+                                            <option value="0">Select</option>
+                                            <option value="timesnewroman">Times New Roman </option>
+                                            <option value="impact"> Impact </option>
+                                            <option value="arial">Arial</option>
+                                            <option value="verdana">Verdana</option>
+                                            <option value="cursive">Cursive </option>
+                                            <option value="tahoma">Tahoma</option>
+                                            <option value="marlett">Marlett</option>
+                                            <option value="georgia">Georgia</option>
+                                            <option value="webdings">webdings</option>
+                                          
                                         </select>
                                     </div>
                                 </td>
@@ -308,27 +308,27 @@
                             <tr>
                                 <td>Upload Banner</td>
                                 <td>:</td>
-                                <td><input type="file" id="BannerInput" onchange="PreviewImageFile('BannerInput', 'Banner1')"></td>
+                                <td><input type="file" id="inputbanner" onchange="PreviewImageFile('inputbanner', 'banner')"></td>
                             </tr>
                             <tr>
                                 <td> Social Logo Size(User)</td>
                                 <td>:</td>
-                                <td><input type="text" id="LogoSizeUser" oninput="SizeChange('Logouser',this.value)"></td>
+                                <td><input type="text" id="inputuserlogosize" oninput="SizeChange('Logouser',this.value)"></td>
                             </tr>
                             <tr>
                                 <td> Social Logo Size(Company)</td>
                                 <td>:</td>
-                                <td><input type="text" id="LogoSizeCompany" oninput="SizeChange('Logoss',this.value)"></td>
+                                <td><input type="text" id="inputcompanylogosize" oninput="SizeChange('Logoss',this.value)"></td>
                             </tr>
                             <tr>
                                 <td>Text Size</td>
                                 <td>:</td>
-                                <td><input type="text" id="Size" oninput="SizeChange('Text',this.value)" /></td> 
+                                <td><input type="text" id="inputtextsize" oninput="SizeChange('Text',this.value)" /></td> 
                             </tr> 
                             <tr>
                                 <td>Main Logo Size</td>
                                 <td>:</td>
-                                <td><input type="text" id="Size" oninput="SizeChange('Main Logo',this.value)" /></td> 
+                                <td><input type="text" id="inputmainlogosize" oninput="SizeChange('Main Logo',this.value)" /></td> 
                             </tr> 
                         </table>
                     </div> 
@@ -337,88 +337,65 @@
             <section id="right">
                 <div id="signature-preview" style="
                      position:relative;
-                     min-height: 300px;
+                     min-height: 400px;
                      width: 500px;
                      display: block;
                      background: white;
                      margin: 20px auto;
                      box-shadow: 0 0 20px 0px #666;" >
-                    <div style="
-                         margin-left: 90px;
-                         padding-top: 15px;
-                         ">
-                        <div style="display: inline" id='Fname' class='output'></div>
-                        <div style="display: inline" id="Title1" class='output'></div>
+                    <div id="layoutbasicinformation" style="margin-left: 90px; padding-top: 15px;">
+                        <div>
+                            <span style="font-weight: bold;  font-size: 18px" id='name' class='output'></span>
+                            <span style=" font-size: 15px" id="title" class='output'></span>
+                        </div>
                         <div style="padding: 4px 0;">
-                            <div>   
-                                <a href="" id="EmailLink" style="text-decoration:none">  
-                                    <div id="Email1" class='output'></div>
+                            <span>   
+                                <a href="" id="emaillink" style="text-decoration:none; font-size: 15px">  
+                                    <span id="email" class='output' style=" font-size: 15px" ></span>
                                 </a>
-                                <div style="display: inline" id="Mobile1" class='output'></div>
-                            </div>
+                                <span style="" id="mobile" class='output'></span>
+                            </span>
                         </div>
                     </div>
-                    <div style="
-                         margin-top: 10px;
-                         margin-left: 90px;
-                         ">
-                        <a href='' id='Clink' style="text-decoration: none; font-size:52px;"> 
-                            <div  style="display: table-row" id="C_name1" class='output'></div>
+                    <div id="layoutcompanyinformation" style="margin-top: 10px; margin-left: 90px;">
+                        <a href='' id='companylink' style="text-decoration: none; font-size:56px;"> 
+                            <span  style="display: block; font-weight:bold;" id="companyname" class='output'></span>
                         </a>
                     </div>
-                    <div style="
-                         margin-top: 20px;
-                         margin-left: 90px;
-                         ">  
+                    <div id="layoutcontactinformation" style="margin-top: 20px; margin-left: 90px;">  
                         <div>
-                            <div style="display: inline" id="O_phone1" class='output'></div>
-                            <div style="display: inline" id="Fax1" class='output'></div>
+                            <span style="display: inline-block; font-size: 16px" id="officephone" class='output'></span>
+                            <span style="display: inline-block; font-size: 16px" id="fax" class='output'></span>
                         </div>
-                        <div id="AddressLine1" class='output'></div>
-                        <div id="AddressLine" class='output'></div>
+                        <span id="addresslineone" style="display:block; font-size: 15px" class='output'></span>
+                        <span id="addresslinetwo" style="display:block; font-size: 15px" class='output'></span>
                         <div>
-                            <a href="" style="text-decoration:none" id="WebLink">
-                                <div id="Website1" class="output">
-                                </div>
+                            <a href="" style="text-decoration:none;  font-size: 15px" id="websitelink">
+                                <span id="website" class="output"></span>
                             </a>
                         </div>
                     </div>
-                    <div style="
-                         position: absolute; top: 0; left: 0;
-                         ">
-                        <a href="" id="LogoLink">
-                            <img src="" id='Logo' height="75" width="75" class="output" alt="">
+                    <div id="layoutlogo" style="position: absolute; top: 0; left: 0;">
+                        <a href="" id="logolink">
+                            <img src="" id='logoimage' height="75" width="75" class="output" alt="">
                         </a>
                     </div>
-                    <div style="
-                         position: absolute;
-                         top: 10px;
-                         right: 20px;
-                         " id='UserLinks'>
-
-                    </div>
-                    <div style="
-                         position: absolute;
-                         top: 85px;
-                         left: 20px;
-                         " id='CompanyLinks'>
-                       
-                    </div>
-                    <div style="
-                         position: absolute;
-                         bottom: -4px;
-                         padding: 0;
-                         ">
-                        <img src="" id="Banner1" width="500" height="50"  alt=""/>
+                    <div style="position: absolute; top: 10px; right: 20px;" id='logouser'></div>
+                    <div style="position: absolute; bottom: 46px; left: 0; width: 100%; text-align: center;" id='logocompany'></div>
+                    <div id="layoutbanner" style="position: absolute; bottom: -4px; padding: 0;">
+                        <img src="" id="banner" width="500" height="50"  alt=""/>
                     </div>
                 </div>
-            </section>            
+            </section>    
         </section>
+     
         <div id="CodeFetch">
         </div>
+        
         <div><button onclick="CodeToShow()">Show Code</button>
             <img src='' id='Imagelogo'  alt=""/>
         </div>
+        
         <script src="ScriptMail.js"></script>
     </body>
 </html>

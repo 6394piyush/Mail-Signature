@@ -8,13 +8,16 @@
     </head>
     <body>
         <h1 id="heading">MAIL SIGNATURE</h1>
-  
-        <!--
-        <div id='preview' style='height: 500px; width: 700px; background: beige; padding:10px' >
-            <a href="#home" ><img src='img/rabbit1.jpg' id='slide' width='600' height="400"></a>
+
+
+        <div id='preview' style='position:relative; height: 500px; width: 100%; background: beige; padding:0px' >
+            <a href="#home" ><img alt="" id='slide' width='600' height="400" /></a>
+            <div style="position: absolute; top: 0; right: 0; height: 500px; width: 50%; text-align: center; font-size: 48px;">
+                <div id="slidetext" style="display: table-cell; padding: 20px; vertical-align: middle; height: 500px;"></div>
+            </div>
         </div>
-        -->
-        
+
+
         <section id="page">
             <section id="left">
                 <ul class="nav">
@@ -33,88 +36,99 @@
                                 <th style="width:10%">Size</th>
                                 <th>Color</th>
                             </tr>
-                        <!--    <tr>
+                            <tr>
                                 <td>Universal</td>
                                 <td>:</td>
-                                <td><input type="text" id="inputuniversal" oninput='universallyUpdateSignatureText(this)'> </td>  
+                                <td><input type="text" id="inputuniversal" oninput='universallyUpdateSignatureText(this)'></td>  
                                 <td><input type="number" min="8" max="40" oninput='universallyUpdateSignatureTextSize(this.value)'/></td>
-                                <td><input class='jscolor' onchange='UniversalColorPicker("name", this.value)'/></td>
+                                <td><input class='jscolor' onchange='UniversalColorPicker(this.value)'/></td>
                             </tr>
-                            <tr> -->
+                            <tr> 
                                 <td>Name</td>
                                 <td>:</td>
-                                <td><input type="text" id="inputname" oninput='updateSignatureText(this)'> </td>  
+                                <td><input type="text" id="inputname" oninput='initialInput(this)'> </td>  
                                 <td><input type="number" id="inputnamesize" min="8" max="40" oninput='updateSignatureTextSize("name", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("name", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Title </td>
                                 <td>:</td>
-                                <td><input type="text" id="inputtitle" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="text" id="inputtitle" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputtitlesize" min="8" max="40" oninput='updateSignatureTextSize("title", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("title", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Email </td>
                                 <td>:</td>
-                                <td><input type="email" id="inputemail" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="email" id="inputemail" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputemailsize"  min="8" max="40" oninput='updateSignatureTextSize("email", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("email", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Mobile</td>
                                 <td>:</td>
-                                <td><input type="text" id="inputmobile" oninput="updateSignatureText(this)"></td>
+                                <td><input type="text" id="inputmobile" oninput="initialInput(this)"></td>
                                 <td><input type="number" id="inputmobilesize" min="8" max="40" oninput='updateSignatureTextSize("mobile", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("mobile", this.value)'/></td>
                             </tr> 
                             <tr>
                                 <td>Company's Name </td>
                                 <td>:</td>
-                                <td><input type="text" id="inputcompanyname" oninput="updateSignatureText(this)"></td>
+                                <td><input type="text" id="inputcompanyname" oninput="initialInput(this)"></td>
                                 <td><input type="number" id="inputcompanynamesize" min="8" max="40" oninput='updateSignatureTextSize("companyname", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("companyname", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Office Phone </td>
                                 <td>:</td>
-                                <td><input type="text" id="inputofficephone" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="text" id="inputofficephone" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputofficephonesize" min="8" max="40" oninput='updateSignatureTextSize("officephone", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("officephone", this.value)'/></td>   
                             </tr>
                             <tr>
                                 <td>Fax </td>
                                 <td>:</td>
-                                <td><input type="text" id="inputfax" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="text" id="inputfax" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputfaxsize" min="8" max="40" oninput='updateSignatureTextSize("fax", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("fax", this.value)'/></td>                         
                             </tr>
                             <tr>
                                 <td>Address</td>
                                 <td>:</td>
-                                <td><input type="text" id="inputaddresslineone" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="text" id="inputaddresslineone" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputaddresslineonesize" min="8" max="40" oninput='updateSignatureTextSize("addresslineone", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("addresslineone", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Address Line 1 </td>
                                 <td>:</td>
-                                <td><input type="text" id="inputaddresslinetwo" oninput="updateSignatureText(this)"></td>
+                                <td><input type="text" id="inputaddresslinetwo" oninput="initialInput(this)"></td>
                                 <td><input type="number" id="inputaddresslinetwosize"  min="8" max="40" oninput='updateSignatureTextSize("addresslinetwo", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("addresslinetwo", this.value)'/></td>
                             </tr>
                             <tr>
                                 <td>Website</td>
                                 <td>:</td>
-                                <td><input type="url" id="inputwebsite" oninput="updateSignatureText(this)"></td> 
+                                <td><input type="url" id="inputwebsite" oninput="initialInput(this)"></td> 
                                 <td><input type="number" id="inputwebsitesize"  min="8" max="40" oninput='updateSignatureTextSize("website", this.value)'/></td>
                                 <td><input class='jscolor' onchange='ColorPicker("website", this.value)'/></td>
                             </tr>
                         </table>
                     </div> 
                     <div id="inputlogo" class="tab hide">
-                        <h4>Maximum Size:100kb</h4>
-                        <input type="file" onchange="PreviewImageFile('inputlogoimage', 'logoimage')" id="inputlogoimage"><br>
+                        <table>
+                            <th>Logo And Banner</th>
+                            <tr>
+                                <td>Select Logo</td>
+                                <td>:</td>
+                                <td><input type="file" onchange="PreviewImageFile('inputlogoimage', 'logoimage')" id="inputlogoimage"><br></td>
+                            </tr>
+                            <tr>
+                                <td>Upload Banner</td>
+                                <td>:</td>
+                                <td><input type="file" id="inputbanner" onchange="PreviewImageFile('inputbanner', 'banner')"></td>
+                            </tr>
+                        </table>
                     </div> 
                     <div id="inputsocial" class="tab hide">
                         <table class="table-input">
@@ -228,15 +242,7 @@
                         </table>
                     </div> 
                     <div id="inputstyle" class="tab hide">
-                        <ul class="nav" id='nav'>
-                            <li><a onclick="showTab('TextStyle', this)">Text Style</a></li>
-                            <li><a onclick="showTab('SizeStyle', this)">Size Style</a></li>
-                            <li><a onclick="showTab('IconStyle', this)">Icon Style</a></li>
-                            <li><a onclick="showTab('Other', this)">STYLE</a></li>
-                        </ul>
-                        <div id='TextStyle' class="tab hide">
 
-                        </div>
                         <table class="table-input">  
                             <tr><td>Select Theme</td>
                                 <td>:</td>
@@ -244,9 +250,10 @@
                                     <div>
                                         <select onchange="ChangeTheme(this.value)" >
                                             <option value='0'>Select Theme </option>
-                                            <option value="Logo Aligned Left">Logo Aligned Left</option>
-                                            <option value="Logo Aligned Right"> Logo Aligned Right</option>
-                                            <option value="Logo Aligned Bottom">Logo Aligned Bottom</option>
+                                            <option value="1">Logo Aligned Left</option>
+                                            <option value="2">Logo Aligned Right</option>
+                                            <option value="4">Logo Aligned Left (Vertical) </option>
+                                            <option value="5">Logo Aligned Right (Vertical) </option>
                                         </select>
                                     </div>
                                 </td>
@@ -255,37 +262,52 @@
                                 <td>:</td>
                                 <td>
                                     <div>
-                                        <select onchange="ChangeStyle(this.value,'Logoss')" >
-                                            
+                                        <select onchange="ChangeStyle(this.value, 'logocompany')" >
+
                                             <option value="0px">Square</option>
                                             <option value="20%"> Rounded</option>
                                             <option value="2% 35% 35% 2%">Right Rounded</option>
-                                            <option value="grayscale=100%">Grey</option>
                                             <option value="50%">Circle</option>
                                             <option value="5% 30%">Two Side Rounded</option>
-                                            
+
                                         </select>
                                     </div>
-                                </td>
+                                </td><td><input type="checkbox" onchange="setGrayscale(this,'logocompany')" />Grayscale</td>
                             </tr>
                             <tr><td>Select Icon Style User</td>
                                 <td>:</td>
                                 <td>
                                     <div>
-                                        <select onchange="ChangeStyle(this.value,'Logouser')" >
+                                        <select onchange="ChangeStyle(this.value, 'logouser')" >
+
+                                            <option value="0px">Square</option>
+                                            <option value="20%"> Rounded</option>
+                                            <option value="2% 35% 35% 2%">Right Rounded</option>
+                                            <option value="50%">Circle</option>
+                                            <option value="5% 30%">Two Side Rounded</option>
+
+                                        </select>
+                                    </div>
+                                </td><td><input type="checkbox" onchange="setGrayscale(this,'logouser')" />Grayscale</td>
+                            </tr>
+                            <tr><td>Select Main Logo Style</td>
+                                <td>:</td>
+                                <td>
+                                    <div>
+                                        <select onchange="ChangeStyle(this.value,'logoimage')" >
                                             
                                             <option value="0px">Square</option>
                                             <option value="20%"> Rounded</option>
                                             <option value="2% 35% 35% 2%">Right Rounded</option>
-                                            <option value="100%">Grey</option>
                                             <option value="50%">Circle</option>
                                             <option value="5% 30%">Two Side Rounded</option>
                                             
                                         </select>
                                     </div>
-                                </td>
+                                </td><td><input type="checkbox" onchange="setGrayscale(this,'logoimage')" />Grayscale</td>
                             </tr>
-                            <tr><td>Select Font</td>
+                            
+                            <tr><td>Select Font<span style="font-size: 12px; color: red">(Some fonts may not be supported by your browser)</span></td>
                                 <td>:</td>
                                 <td>
                                     <div>
@@ -300,16 +322,11 @@
                                             <option value="marlett">Marlett</option>
                                             <option value="georgia">Georgia</option>
                                             <option value="webdings">webdings</option>
-                                          
                                         </select>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Upload Banner</td>
-                                <td>:</td>
-                                <td><input type="file" id="inputbanner" onchange="PreviewImageFile('inputbanner', 'banner')"></td>
-                            </tr>
+
                             <tr>
                                 <td> Social Logo Size(User)</td>
                                 <td>:</td>
@@ -321,9 +338,9 @@
                                 <td><input type="text" id="inputcompanylogosize" oninput="SizeChange('Logoss',this.value)"></td>
                             </tr>
                             <tr>
-                                <td>Text Size</td>
+                                <td>Background Color</td>
                                 <td>:</td>
-                                <td><input type="text" id="inputtextsize" oninput="SizeChange('Text',this.value)" /></td> 
+                                <td><input class='jscolor' onchange='BackgroundColor(this.value)'/></td> 
                             </tr> 
                             <tr>
                                 <td>Main Logo Size</td>
@@ -345,39 +362,39 @@
                      box-shadow: 0 0 20px 0px #666;" >
                     <div id="layoutbasicinformation" style="margin-left: 90px; padding-top: 15px;">
                         <div>
-                            <span style="font-weight: bold;  font-size: 18px" id='name' class='output'></span>
-                            <span style=" font-size: 15px" id="title" class='output'></span>
+                            <span style="font-weight: bold;  font-size: 18px" id='name' class='output'>John</span>
+                            <span style=" font-size: 15px" id="title" class='output'>| Developer</span>
                         </div>
                         <div style="padding: 4px 0;">
                             <span>   
                                 <a href="" id="emaillink" style="text-decoration:none; font-size: 15px">  
-                                    <span id="email" class='output' style=" font-size: 15px" ></span>
+                                    <span id="email" class='output' style=" font-size: 15px" >john@jonastech.co.in</span>
                                 </a>
-                                <span style="" id="mobile" class='output'></span>
+                                <span style="" id="mobile" class='output'><b>M:</b>8546325468</span>
                             </span>
                         </div>
                     </div>
                     <div id="layoutcompanyinformation" style="margin-top: 10px; margin-left: 90px;">
                         <a href='' id='companylink' style="text-decoration: none; font-size:56px;"> 
-                            <span  style="display: block; font-weight:bold;" id="companyname" class='output'></span>
+                            <span  style="display: block; font-weight:bold;" id="companyname" class='output'>JonasTech</span>
                         </a>
                     </div>
                     <div id="layoutcontactinformation" style="margin-top: 20px; margin-left: 90px;">  
                         <div>
-                            <span style="display: inline-block; font-size: 16px" id="officephone" class='output'></span>
-                            <span style="display: inline-block; font-size: 16px" id="fax" class='output'></span>
+                            <span style="display: inline-block; font-size: 16px" id="officephone" class='output'><b>O:</b>54632564</span>
+                            <span style="display: inline-block; font-size: 16px" id="fax" class='output'><b>F:</b>45686584</span>
                         </div>
-                        <span id="addresslineone" style="display:block; font-size: 15px" class='output'></span>
-                        <span id="addresslinetwo" style="display:block; font-size: 15px" class='output'></span>
+                        <span id="addresslineone" style="display:block; font-size: 15px" class='output'>221 Lake Street </span>
+                        <span id="addresslinetwo" style="display:block; font-size: 15px" class='output'>London UK</span>
                         <div>
                             <a href="" style="text-decoration:none;  font-size: 15px" id="websitelink">
-                                <span id="website" class="output"></span>
+                                <span id="website" class="output">http://www.jonastech.com</span>
                             </a>
                         </div>
                     </div>
                     <div id="layoutlogo" style="position: absolute; top: 0; left: 0;">
                         <a href="" id="logolink">
-                            <img src="" id='logoimage' height="75" width="75" class="output" alt="">
+                            <img src="" id='logoimage' height="75" width="75" class="output logoimage" alt="">
                         </a>
                     </div>
                     <div style="position: absolute; top: 10px; right: 20px;" id='logouser'></div>
@@ -388,14 +405,13 @@
                 </div>
             </section>    
         </section>
-     
-        <div id="CodeFetch">
+
+        <div id="code-container">
+            <div class="close" onclick="this.parentNode.setAttribute('class', 'hide')">X</div>
+            <div id="code"></div>
         </div>
-        
-        <div><button onclick="CodeToShow()">Show Code</button>
-            <img src='' id='Imagelogo'  alt=""/>
-        </div>
-        
+        <div><button onclick="showCode()">Show Code</button></div>
+
         <script src="ScriptMail.js"></script>
     </body>
 </html>
